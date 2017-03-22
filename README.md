@@ -3,9 +3,9 @@ Rest service gemaakt door Jochem Kuus, V2A. Na de service gedeployed te hebben k
 
 Hierbij zal {postcode} vervangen moeten worden door de postcode die opgezocht wordt.
 Daaruit kunnen de volgende drie, JSON-string, responses komen:
-  Een latitude en longitude
-  Errorcode 404, de postcode volgt de juiste syntax maar is niet gevonden
-  Errorcode 500, de postcode volgt niet de juiste syntax (juiste syntax wordt als voorbeeld meegegeven)
+- Een latitude en longitude
+- Errorcode 404, de postcode volgt de juiste syntax maar is niet gevonden
+- Errorcode 500, de postcode volgt niet de juiste syntax (juiste syntax wordt als voorbeeld meegegeven)
 
 JUnit tests kunnen gevonden worden onder Java/src/Test
 Test plan staat in de hoofdmap
