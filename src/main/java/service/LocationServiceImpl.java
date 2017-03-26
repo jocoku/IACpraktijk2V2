@@ -12,6 +12,7 @@ import javax.ws.rs.*;
 public class LocationServiceImpl {
 
     @GET
+    @Produces("application/json")
     @Path("/lookup/{postcode}")
     public String getLatLng(@PathParam("postcode") String postcode) {
         GoogleLookupService gls = new GoogleLookupService();

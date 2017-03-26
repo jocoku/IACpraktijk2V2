@@ -14,7 +14,6 @@ public class negTestNotExist {
     public void classCrashNoLoc(){
         LocationServiceImpl lSI = new LocationServiceImpl();
 
-
         String result = lSI.getLatLng("5555RR");
         assertEquals(result, "{\"Errorcode\":404,\"Errormessage\":\"Location not found for postcode: 5555RR\"}");
     }
