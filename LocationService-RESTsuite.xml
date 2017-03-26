@@ -1,2 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testSuite id="72e084cd-d004-42c4-8b87-40c0b7efeb36" name="LocationService RESTsuite" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="e9d6d5e3-d77b-4129-b509-3de7b9795af3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Postcode correct" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Correct request" id="b9443733-0c80-4482-b894-694706822e34"><con:settings/><con:config service="http://localhost:8080" resourcePath="/rest/location/lookup/{postcode}" methodName="Lookup 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Correct request" id="b055d209-ee1a-4b62-83a4-a0308d4a44d5" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/rest/location/lookup/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="postcode" value="3731XC" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>postcode</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a0a878ee-c0b3-453d-8d53-a7e84d12c975" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Invalid Length test" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Invalid length" id="187eaa41-fe4d-40ed-976e-1e3ff8cb01a7"><con:settings/><con:config service="http://localhost:8080" resourcePath="/rest/location/lookup/{postcode}" methodName="Lookup 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Invalid length" id="745f5139-fd48-44f6-b320-4c4ae4def93a" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/rest/location/lookup/33731XC</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="postcode" value="33731XC" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e9fc6f9b-136d-4c78-a754-70362777543e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Illegal Character" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Illegal character" id="db6e45a9-e0bb-40bd-8b08-07ed47d919ae"><con:settings/><con:config service="http://localhost:8080" resourcePath="/rest/location/lookup/{postcode}" methodName="Lookup 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Illegal character" id="2a0dd2d4-86a1-4813-887f-4fad25777fe6" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/rest/location/lookup/3731%40X</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="postcode" value="3731@X" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2c7e4ace-aa8c-449a-912d-1fe435437650" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Postcode not found" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Postcode not found" id="bc94d451-15db-4178-b36e-25e7cc115bcc"><con:settings/><con:config service="http://localhost:8080" resourcePath="/rest/location/lookup/{postcode}" methodName="Lookup 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Postcode not found" id="5e9e1707-9f86-4ce6-bc62-2618a8845b45" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/rest/location/lookup/5555RR</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="postcode" value="5555RR" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="c2bff5fa-a349-4ae4-b9b5-bb4569361698" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Incorrect syntax" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Incorrect syntax" id="81ccbc05-abf9-40e9-a7ee-256d98c48691"><con:settings/><con:config service="http://localhost:8080" resourcePath="/rest/location/lookup/{postcode}" methodName="Lookup 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Incorrect syntax" id="54656211-e3cc-4225-b7d9-a099a302c706" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/rest/location/lookup/37317X</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="postcode" value="37317X" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite>
+<con:testSuite id="72e084cd-d004-42c4-8b87-40c0b7efeb36" name="LocationService RESTsuite"
+               xmlns:con="http://eviware.com/soapui/config">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="e9d6d5e3-d77b-4129-b509-3de7b9795af3" failOnError="true" failTestCaseOnErrors="true"
+                  keepSession="false" maxResults="0" name="Postcode correct" searchProperties="true">
+        <con:settings/>
+        <con:testStep type="restrequest" name="Correct request" id="b9443733-0c80-4482-b894-694706822e34">
+            <con:settings/>
+            <con:config service="http://localhost:8080" resourcePath="/rest/location/lookup/{postcode}"
+                        methodName="Lookup 1" xsi:type="con:RestRequestStep"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <con:restRequest name="Correct request" id="b055d209-ee1a-4b62-83a4-a0308d4a44d5"
+                                 mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8080</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>http://localhost/rest/location/lookup/</con:originalUri>
+                    <con:credentials>
+                        <con:authType>No Authorization</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="postcode" value="3731XC" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                    <con:parameterOrder>
+                        <con:entry>postcode</con:entry>
+                    </con:parameterOrder>
+                </con:restRequest>
+            </con:config>
+        </con:testStep>
+        <con:properties/>
+    </con:testCase>
+    <con:testCase id="a0a878ee-c0b3-453d-8d53-a7e84d12c975" failOnError="true" failTestCaseOnErrors="true"
+                  keepSession="false" maxResults="0" name="Invalid Length test" searchProperties="true">
+        <con:settings/>
+        <con:testStep type="restrequest" name="Invalid length" id="187eaa41-fe4d-40ed-976e-1e3ff8cb01a7">
+            <con:settings/>
+            <con:config service="http://localhost:8080" resourcePath="/rest/location/lookup/{postcode}"
+                        methodName="Lookup 1" xsi:type="con:RestRequestStep"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <con:restRequest name="Invalid length" id="745f5139-fd48-44f6-b320-4c4ae4def93a"
+                                 mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8080</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>http://localhost/rest/location/lookup/33731XC</con:originalUri>
+                    <con:credentials>
+                        <con:authType>No Authorization</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="postcode" value="33731XC" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                </con:restRequest>
+            </con:config>
+        </con:testStep>
+        <con:properties/>
+    </con:testCase>
+    <con:testCase id="e9fc6f9b-136d-4c78-a754-70362777543e" failOnError="true" failTestCaseOnErrors="true"
+                  keepSession="false" maxResults="0" name="Illegal Character" searchProperties="true">
+        <con:settings/>
+        <con:testStep type="restrequest" name="Illegal character" id="db6e45a9-e0bb-40bd-8b08-07ed47d919ae">
+            <con:settings/>
+            <con:config service="http://localhost:8080" resourcePath="/rest/location/lookup/{postcode}"
+                        methodName="Lookup 1" xsi:type="con:RestRequestStep"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <con:restRequest name="Illegal character" id="2a0dd2d4-86a1-4813-887f-4fad25777fe6"
+                                 mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8080</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>http://localhost/rest/location/lookup/3731%40X</con:originalUri>
+                    <con:credentials>
+                        <con:authType>No Authorization</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="postcode" value="3731@X" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                </con:restRequest>
+            </con:config>
+        </con:testStep>
+        <con:properties/>
+    </con:testCase>
+    <con:testCase id="2c7e4ace-aa8c-449a-912d-1fe435437650" failOnError="true" failTestCaseOnErrors="true"
+                  keepSession="false" maxResults="0" name="Postcode not found" searchProperties="true">
+        <con:settings/>
+        <con:testStep type="restrequest" name="Postcode not found" id="bc94d451-15db-4178-b36e-25e7cc115bcc">
+            <con:settings/>
+            <con:config service="http://localhost:8080" resourcePath="/rest/location/lookup/{postcode}"
+                        methodName="Lookup 1" xsi:type="con:RestRequestStep"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <con:restRequest name="Postcode not found" id="5e9e1707-9f86-4ce6-bc62-2618a8845b45"
+                                 mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8080</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>http://localhost/rest/location/lookup/5555RR</con:originalUri>
+                    <con:credentials>
+                        <con:authType>No Authorization</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="postcode" value="5555RR" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                </con:restRequest>
+            </con:config>
+        </con:testStep>
+        <con:properties/>
+    </con:testCase>
+    <con:testCase id="c2bff5fa-a349-4ae4-b9b5-bb4569361698" failOnError="true" failTestCaseOnErrors="true"
+                  keepSession="false" maxResults="0" name="Incorrect syntax" searchProperties="true">
+        <con:settings/>
+        <con:testStep type="restrequest" name="Incorrect syntax" id="81ccbc05-abf9-40e9-a7ee-256d98c48691">
+            <con:settings/>
+            <con:config service="http://localhost:8080" resourcePath="/rest/location/lookup/{postcode}"
+                        methodName="Lookup 1" xsi:type="con:RestRequestStep"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <con:restRequest name="Incorrect syntax" id="54656211-e3cc-4225-b7d9-a099a302c706"
+                                 mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8080</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>http://localhost/rest/location/lookup/37317X</con:originalUri>
+                    <con:credentials>
+                        <con:authType>No Authorization</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="postcode" value="37317X" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                </con:restRequest>
+            </con:config>
+        </con:testStep>
+        <con:properties/>
+    </con:testCase>
+    <con:properties/>
+</con:testSuite>
